@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(25,25,25);
+}
+
+// base + nesting
+.header{
+    width: 1000px;
+    background-color: lightblue;
+    height: 140px;
+    margin-bottom: 150px;
+
+    &-menu{
+        background-color: lightgreen;
+        width: 700px;
+        height: 80px;
+        padding: 10px;
+
+        &-list{
+            background-color: lightpink;
+
+            &-item{
+                background-color: lightyellow;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+// mixin
+@mixin box-styles ($margin-bottom: 100px) {
+    width: 300px;
+    aspect-ratio: 1;
+    background-color: lightgray;
+    margin-bottom: $margin-bottom;
+}
+
+// mixin + variables
+@mixin adaptive-font-size ($min: 16px, $max: 36px) {
+    font-size: clamp(#{$min}px, #{$max/1920*100}vw, #{$max}px)
+}
+
+.box-1{
+    // include
+    @include box-styles();
+    // nesting + include
+    h1{
+        @include adaptive-font-size(14, 100)
+    }
+
+}
+
+// functions
+@function makePaddingSize($multiplier: 1){
+    @return #{$multiplier * 8}px
+}
+
+.box-2{
+    @include box-styles();
+    @include adaptive-font-size(16, 60);
+
+    padding: makePaddingSize(4);
+}

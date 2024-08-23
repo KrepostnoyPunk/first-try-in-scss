@@ -1,0 +1,42 @@
+body {
+  background-color: rgb(25, 25, 25);
+}
+
+.header {
+  width: 1000px;
+  background-color: lightblue;
+  height: 140px;
+  margin-bottom: 150px;
+}
+.header-menu {
+  background-color: lightgreen;
+  width: 700px;
+  height: 80px;
+  padding: 10px;
+}
+.header-menu-list {
+  background-color: lightpink;
+}
+.header-menu-list-item {
+  background-color: lightyellow;
+  margin-bottom: 10px;
+}
+
+.box-1 {
+  width: 300px;
+  aspect-ratio: 1;
+  background-color: lightgray;
+  margin-bottom: 100px;
+}
+.box-1 h1 {
+  font-size: clamp(14px, 5.2083333333vw, 100px);
+}
+
+.box-2 {
+  width: 300px;
+  aspect-ratio: 1;
+  background-color: lightgray;
+  margin-bottom: 100px;
+  font-size: clamp(16px, 3.125vw, 60px);
+  padding: 32px;
+}/*# sourceMappingURL=styles.css.map */
